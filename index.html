@@ -71,10 +71,11 @@
     <button id="botaoConsulta" onclick="consultarImagem()">Consultar Programação</button>
   </div>
 
-  <script>
+    <script>
     const tecnicosPorBase = {
-      "Sorocaba": ["Luis Augusto Fernandes Da Silva"],
-      "Mogi Guaçu": ["Muriel Naressi Albano"]
+      "Sorocaba": ["Stefany Dias Rossi", "Luis Augusto Fernandes Da Silva", "Everson Da Silva Soares"],
+      "Mogi Guaçu": ["Muriel Naressi Albano"],
+
     };
 
     const credenciais = {
@@ -85,8 +86,18 @@
       "Muriel Naressi Albano": {
         senha: "2025",
         imagem: "https://i.ibb.co/zhm9G4s5/Muriel-Naressi-Albano.png"
-      }
+      },
+      "Stefany Dias Rossi": {
+        senha: "2025",
+        imagem: "https://i.ibb.co/zhm9G4s5/Muriel-Naressi-Albano.png"
+      },
+            "Everson Da Silva Soares": {
+        senha: "2025",
+        imagem: "https://i.ibb.co/zhm9G4s5/Muriel-Naressi-Albano.png"
+      },
+
     };
+
 
     function atualizarTecnicos() {
       const base = document.getElementById("base").value;
