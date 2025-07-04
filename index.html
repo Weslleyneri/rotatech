@@ -51,11 +51,11 @@
   <div class="container">
     <h2>Consulta de Programação</h2>
 
-    <label for="base">Base de Atendimento:</label>
+   <label for="base">Base de Atendimento:</label>
     <select id="base" onchange="atualizarTecnicos()">
       <option value="">Selecione a base</option>
       <option value="Sorocaba">Sorocaba</option>
-      <option value="Mogi Guaçu">Mogi Guaçu</option>
+      <option value="Campinas">Campinas</option>
     </select>
 
     <label for="tecnico">Técnico:</label>
@@ -73,26 +73,117 @@
 
   <script>
     const tecnicosPorBase = {
-      "Sorocaba": ["Stefany Dias Rossi", "Luis Augusto Fernandes Da Silva", "Everson Da Silva Soares"],
-      "Mogi Guaçu": ["Muriel Naressi Albano"],
+      "Sorocaba": ["Stefany Dias Rossi", "Luis Augusto Fernandes Da Silva", "Everson Da Silva Soares", "Leone Henrique Da Silva Santos", "Vagner De Souza Barbosa", "Wilson Soares Dos Santos", "Diego Veronese Paschoalato", "Clovis Ouchar Júnior", "Gabriel Amorim Fogaça De Sousa", "Heleno Meira Dos Santos", "Ian Garcia Da Costa","Márcio Santos Santana", "Rafael De Lima Santana","Renato Nascimento Santos"],
+      "Campinas": ["Vinicius Dacio Da Silva", "Saulo Emmanuel Dos Santos Brito", "Ricardo Rocha De Souza", "Paulo Henrique Santana De Melo", "Matheus Nielsen Ferraz", "Mateus Vinicius Rodrigues Batista", "Helder Silva Sampaio","Gabriel Leonardo Oliveira Ozorio", "Filipi De Almeida Mamoni", "Bruno Rafael Nascimento Gonçalves", "Alexandre Matias Carvalho Lima", "Alefe Guímel Vieira De Lacerda"],
 
     };
 
     const credenciais = {
-      "Luis Augusto Fernandes Da Silva": {
+      "Luis Augusto Fernandes Da Silva": { // Sorocaba
         senha: "465",
-        imagem: "https://github.com/user-attachments/assets/a12a3546-7ed7-4de7-990f-a8fbea603104" // Caminho da imagem
+        imagem: "https://i.ibb.co/WvJjfSDv/luis465.png" // Caminho da imagem
       },
-      "Muriel Naressi Albano": {
-        senha: "372",
-        imagem: "https://github.com/user-attachments/assets/bda75b87-d238-4d4b-8a82-2005d6b2aea7"
+      "Leone Henrique Da Silva Santos": { // Sorocaba
+        senha: "448",
+        imagem: "https://i.ibb.co/rRjnBJ0B/Muriel372.png"
       },
-      "Stefany Dias Rossi": {
+      "Stefany Dias Rossi": { // Sorocaba
         senha: "410",
-        imagem: "https://github.com/user-attachments/assets/504cf5e2-b369-4f9a-ab80-9d7f0ae1dc2e"
+        imagem: "https://i.ibb.co/RpmrCYrF/Stephanny410.png"
       },
-            "Everson Da Silva Soares": {
+            "Everson Da Silva Soares": { // Sorocaba
         senha: "308",
+        imagem: "https://i.ibb.co/zhm9G4s5/Muriel-Naressi-Albano.png"
+      },
+                  "Vagner De Souza Barbosa": { // Sorocaba
+        senha: "367",
+        imagem: "https://i.ibb.co/zhm9G4s5/Muriel-Naressi-Albano.png"
+      },
+                        "Wilson Soares Dos Santos": { // Sorocaba
+        senha: "312",
+        imagem: "https://i.ibb.co/zhm9G4s5/Muriel-Naressi-Albano.png"
+      },
+                              "Clovis Ouchar Júnior": { // Sorocaba
+        senha: "336",
+        imagem: "https://i.ibb.co/zhm9G4s5/Muriel-Naressi-Albano.png"
+      },
+                                    "Diego Veronese Paschoalato": { // Sorocaba
+        senha: "222",
+        imagem: "https://i.ibb.co/zhm9G4s5/Muriel-Naressi-Albano.png"
+
+      },                              "Gabriel Amorim Fogaça De Sousa": { // Sorocaba
+        senha: "420",
+        imagem: "https://i.ibb.co/zhm9G4s5/Muriel-Naressi-Albano.png"
+
+      },                              "Heleno Meira Dos Santos": { // Sorocaba
+        senha: "268",
+        imagem: "https://i.ibb.co/zhm9G4s5/Muriel-Naressi-Albano.png"
+
+      },                              "Ian Garcia Da Costa": { // Sorocaba
+        senha: "477",
+        imagem: "https://i.ibb.co/zhm9G4s5/Muriel-Naressi-Albano.png"
+
+      },                              "Márcio Santos Santana": { // Sorocaba
+        senha: "946",
+        imagem: "https://i.ibb.co/zhm9G4s5/Muriel-Naressi-Albano.png"
+
+      },                              "Rafael De Lima Santana": { // Sorocaba
+        senha: "462",
+        imagem: "https://i.ibb.co/zhm9G4s5/Muriel-Naressi-Albano.png"
+
+      },                              "Renato Nascimento Santos": { // Sorocaba
+        senha: "351",
+        imagem: "https://i.ibb.co/zhm9G4s5/Muriel-Naressi-Albano.png"
+
+        //BASE CAMPINAS
+
+      },
+                                    "Alefe Guímel Vieira De Lacerda": { // Campinas
+        senha: "055",
+        imagem: "https://i.ibb.co/zhm9G4s5/Muriel-Naressi-Albano.png"
+      },
+                                    "Alexandre Matias Carvalho Lima": { // Campinas
+        senha: "152",
+        imagem: "https://i.ibb.co/zhm9G4s5/Muriel-Naressi-Albano.png"
+      },
+                                    "Bruno Rafael Nascimento Gonçalves": { // Campinas
+        senha: "991",
+        imagem: "https://i.ibb.co/zhm9G4s5/Muriel-Naressi-Albano.png"
+      },
+                                    "Filipi De Almeida Mamoni": { // Campinas
+        senha: "494",
+        imagem: "https://i.ibb.co/zhm9G4s5/Muriel-Naressi-Albano.png"
+      },
+                                    "Gabriel Leonardo Oliveira Ozorio": { // Campinas
+        senha: "488",
+        imagem: "https://i.ibb.co/zhm9G4s5/Muriel-Naressi-Albano.png"
+      },
+                                    "Helder Silva Sampaio": { // Campinas
+        senha: "431",
+        imagem: "https://i.ibb.co/zhm9G4s5/Muriel-Naressi-Albano.png"
+      },
+                                    "Mateus Vinicius Rodrigues Batista": { // Campinas
+        senha: "055",
+        imagem: "https://i.ibb.co/zhm9G4s5/Muriel-Naressi-Albano.png"
+      },
+                                    "Matheus Nielsen Ferraz": { // Campinas
+        senha: "477",
+        imagem: "https://i.ibb.co/zhm9G4s5/Muriel-Naressi-Albano.png"
+      },
+                                    "Paulo Henrique Santana De Melo": { // Campinas
+        senha: "991",
+        imagem: "https://i.ibb.co/zhm9G4s5/Muriel-Naressi-Albano.png"
+      },
+                                    "Ricardo Rocha De Souza": { // Campinas
+        senha: "227",
+        imagem: "https://i.ibb.co/zhm9G4s5/Muriel-Naressi-Albano.png"
+      },
+                                    "Saulo Emmanuel Dos Santos Brito": { // Campinas
+        senha: "215",
+        imagem: "https://i.ibb.co/zhm9G4s5/Muriel-Naressi-Albano.png"
+      },
+                                    "Vinicius Dacio Da Silva": { // Campinas
+        senha: "525",
         imagem: "https://i.ibb.co/zhm9G4s5/Muriel-Naressi-Albano.png"
       },
 
