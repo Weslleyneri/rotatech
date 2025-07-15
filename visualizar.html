@@ -35,26 +35,58 @@
     }
 
     .voltar:hover {
-      background: rgba(0,0,0,0.9);
+      background: rgba(243, 243, 243, 0);
     }
   </style>
 </head>
 <body>
-  <a href="index.html" class="voltar">← Voltar</a>
-  <img id="programacao" src="" alt="Programação do Técnico" />
 
+  <h2>Programação do Técnico</h2>
+
+  <div id="imagemContainer">
+    <!-- Imagem clicável será inserida via JS -->
+  </div>
+
+  <br>
+  <button onclick="window.history.back()">Voltar</button>
+   
   <script>
-    // Captura a imagem da URL e exibe
-    const params = new URLSearchParams(window.location.search);
-    const imgSrc = params.get("img");
+    const linksPorTecnico = {
+      "Luis Augusto Fernandes Da Silva": "https://www.r7.com/",
+      "Leone Henrique Da Silva Santos": "https://exemplo.com/leone",
+      "Stefany Dias Rossi": "https://exemplo.com/stefany",
+      "Everson Da Silva Soares": "https://exemplo.com/everson",
+      "Ronaldo Cespedes": "https://exemplo.com/everson",
+      "Thomaz Eder De Souza": "https://progress.getcircuit.com/?user=9LdKiRSIOEdIu9aDE3kBA0GEcE02&route=jYEwTVTpvte2K0zVcR3g&displayName=Weslley+Neri",
+      "Vinicius Mucio": "https://progress.getcircuit.com/?user=9LdKiRSIOEdIu9aDE3kBA0GEcE02&route=jYEwTVTpvte2K0zVcR3g&displayName=Weslley+Neri",
+      "Wellington Tranquitella De Melo": "https://progress.getcircuit.com/?user=9LdKiRSIOEdIu9aDE3kBA0GEcE02&route=jYEwTVTpvte2K0zVcR3g&displayName=Weslley+Neri",
+      "Eriton Oliveira Pinto Da Silva": "https://progress.getcircuit.com/?user=9LdKiRSIOEdIu9aDE3kBA0GEcE02&route=jYEwTVTpvte2K0zVcR3g&displayName=Weslley+Neri",
+      "Ademir Borges De Souza Junior": "https://progress.getcircuit.com/?user=9LdKiRSIOEdIu9aDE3kBA0GEcE02&route=jYEwTVTpvte2K0zVcR3g&displayName=Weslley+Neri",
+      "João Paulo Da Silva Rafel": "https://progress.getcircuit.com/?user=9LdKiRSIOEdIu9aDE3kBA0GEcE02&route=jYEwTVTpvte2K0zVcR3g&displayName=Weslley+Neri",
+      "Euller Dos Santos Batista": "https://progress.getcircuit.com/?user=9LdKiRSIOEdIu9aDE3kBA0GEcE02&route=jYEwTVTpvte2K0zVcR3g&displayName=Weslley+Neri",
+      // Adicione os demais técnicos e seus links aqui - Link de Roterização
+    };
 
-    if (imgSrc) {
-      document.getElementById("programacao").src = decodeURIComponent(imgSrc);
-    } else {
-      document.body.innerHTML = "<h2 style='color:white'>Imagem não encontrada.</h2>";
+    function getParametro(nome) {
+      const params = new URLSearchParams(window.location.search);
+      return decodeURIComponent(params.get(nome));
     }
 
-    
+    const imagem = getParametro("img");
+    const tecnico = getParametro("tecnico");
+
+    if (!imagem || !tecnico) {
+      document.getElementById("imagemContainer").innerHTML = "<p>Parâmetros inválidos.</p>";
+    } else {
+      const link = linksPorTecnico[tecnico] || "#";
+
+      document.getElementById("imagemContainer").innerHTML = `
+        <a href="${link}" target="_blank" title="Clique para abrir a rota do técnico">
+          <img src="${imagem}" alt="Programação do Técnico" />
+        </a>
+      `;
+    }
   </script>
+
 </body>
 </html>
