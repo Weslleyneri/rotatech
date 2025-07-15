@@ -51,11 +51,16 @@
   <div class="container">
     <h2>Consulta de Programação</h2>
 
-   <label for="base">Base de Atendimento:</label>
+    <label for="base">Base de Atendimento:</label>
     <select id="base" onchange="atualizarTecnicos()">
       <option value="">Selecione a base</option>
       <option value="Sorocaba">Sorocaba</option>
       <option value="Campinas">Campinas</option>
+      <option value="Jáu">Jáu</option>
+      <option value="Presidente Prudente">Presidente Prudente</option>
+      <option value="Bauru">Bauru</option>
+      <option value="Marília">Marília</option>
+      <option value="Araçatuba">Araçatuba</option>
     </select>
 
     <label for="tecnico">Técnico:</label>
@@ -75,13 +80,20 @@
     const tecnicosPorBase = {
       "Sorocaba": ["Stefany Dias Rossi", "Luis Augusto Fernandes Da Silva", "Everson Da Silva Soares", "Leone Henrique Da Silva Santos", "Vagner De Souza Barbosa", "Wilson Soares Dos Santos", "Diego Veronese Paschoalato", "Clovis Ouchar Júnior", "Gabriel Amorim Fogaça De Sousa", "Heleno Meira Dos Santos", "Ian Garcia Da Costa","Márcio Santos Santana", "Rafael De Lima Santana","Renato Nascimento Santos"],
       "Campinas": ["Vinicius Dacio Da Silva", "Saulo Emmanuel Dos Santos Brito", "Ricardo Rocha De Souza", "Paulo Henrique Santana De Melo", "Matheus Nielsen Ferraz", "Mateus Vinicius Rodrigues Batista", "Helder Silva Sampaio","Gabriel Leonardo Oliveira Ozorio", "Filipi De Almeida Mamoni", "Bruno Rafael Nascimento Gonçalves", "Alexandre Matias Carvalho Lima", "Alefe Guímel Vieira De Lacerda"],
+      "Jáu": ["Ronaldo Cespedes"],
+      "Presidente Prudente": ["Thomaz Eder De Souza","Eriton Oliveira Pinto Da Silva"],
+      "Bauru": ["Vinicius Mucio", "João Paulo Da Silva Rafael"],
+      "Marília":["Wellington Tranquitella De Melo", "Euller Dos Santos Batista"],
+      "Presidente Prudente": ["Eriton Oliveira Pinto Da Silva"],
+      "Araçatuba": ["Ademir Borges De Souza Junior"],
 
     };
 
     const credenciais = {
       "Luis Augusto Fernandes Da Silva": { // Sorocaba
         senha: "465",
-        imagem: "https://github.com/user-attachments/assets/d65f1bfb-ead6-4a44-a7c9-dbdbb45b942f" // Caminho da imagem
+        imagem: "file:///C:/Users/75036/Pictures/Screenshots/Captura%20de%20tela%202025-06-17%20170844.png" // Caminho da imagem
+        
       },
       "Leone Henrique Da Silva Santos": { // Sorocaba
         senha: "448",
@@ -89,15 +101,16 @@
       },
       "Stefany Dias Rossi": { // Sorocaba
         senha: "410",
-        imagem: "https://github.com/user-attachments/assets/e9ae48c5-4d90-4a75-856b-801baedb864b"
+        imagem: "https://i.ibb.co/RpmrCYrF/Stephanny410.png"
+        
       },
             "Everson Da Silva Soares": { // Sorocaba
         senha: "308",
-        imagem: "https://github.com/user-attachments/assets/bb939b8d-d177-496a-90c0-ccb808dae0f7"
+        imagem: "https://i.ibb.co/zhm9G4s5/Muriel-Naressi-Albano.png"
       },
                   "Vagner De Souza Barbosa": { // Sorocaba
         senha: "367",
-        imagem: "https://github.com/user-attachments/assets/9c5978af-4e50-4e19-ac8b-432e8438aa9e"
+        imagem: "https://i.ibb.co/zhm9G4s5/Muriel-Naressi-Albano.png"
       },
                         "Wilson Soares Dos Santos": { // Sorocaba
         senha: "312",
@@ -105,7 +118,7 @@
       },
                               "Clovis Ouchar Júnior": { // Sorocaba
         senha: "336",
-        imagem: "https://github.com/user-attachments/assets/cb61821a-3fd7-4cad-9a80-111f0eaaddbd"
+        imagem: "https://i.ibb.co/zhm9G4s5/Muriel-Naressi-Albano.png"
       },
                                     "Diego Veronese Paschoalato": { // Sorocaba
         senha: "222",
@@ -117,7 +130,7 @@
 
       },                              "Heleno Meira Dos Santos": { // Sorocaba
         senha: "268",
-        imagem: "https://github.com/user-attachments/assets/d7687392-88f6-403b-a68b-8009a16908ef"
+        imagem: "https://i.ibb.co/zhm9G4s5/Muriel-Naressi-Albano.png"
 
       },                              "Ian Garcia Da Costa": { // Sorocaba
         senha: "477",
@@ -129,7 +142,7 @@
 
       },                              "Rafael De Lima Santana": { // Sorocaba
         senha: "462",
-        imagem: "https://github.com/user-attachments/assets/921d3bfa-6662-4ac5-a20b-e3c6c07f29c2"
+        imagem: "https://i.ibb.co/zhm9G4s5/Muriel-Naressi-Albano.png"
 
       },                              "Renato Nascimento Santos": { // Sorocaba
         senha: "351",
@@ -186,8 +199,50 @@
         senha: "525",
         imagem: "https://i.ibb.co/zhm9G4s5/Muriel-Naressi-Albano.png"
       },
+      //BASE JÁU
+
+                                          "Ronaldo Cespedes": { // Jáu
+        senha: "334",
+        imagem: "https://i.ibb.co/zhm9G4s5/Muriel-Naressi-Albano.png"
+      },
+      //BASE Presidente Prudente
+                                                "Thomaz Eder De Souza": { // Jáu
+        senha: "381",
+        imagem: "https://i.ibb.co/zhm9G4s5/Muriel-Naressi-Albano.png"
+      },
+                                                      "Eriton Oliveira Pinto Da Silva": { // Jáu
+        senha: "293",
+        imagem: "https://i.ibb.co/zhm9G4s5/Muriel-Naressi-Albano.png"
+      },
+            //BASE Bauru
+                                                           "Vinicius Mucio": { // Jáu
+        senha: "381",
+        imagem: "https://i.ibb.co/zhm9G4s5/Muriel-Naressi-Albano.png"
+      },
+                                                      "João Paulo Da Silva Rafael": { // Jáu
+        senha: "395",
+        imagem: "https://i.ibb.co/zhm9G4s5/Muriel-Naressi-Albano.png"
+      }, 
+      //BASE Araçatuba
+                                                            "Ademir Borges De Souza Junior": { // Jáu
+        senha: "340",
+        imagem: "https://i.ibb.co/zhm9G4s5/Muriel-Naressi-Albano.png"
+      }, 
+            //BASE Marilia
+                                                              "Euller Dos Santos Batista": { // Jáu
+        senha: "418",
+        imagem: "https://i.ibb.co/zhm9G4s5/Muriel-Naressi-Albano.png"
+      },   
+                                                             "Wellington Tranquitella De Melo": { // Jáu
+        senha: "275",
+        imagem: "https://i.ibb.co/zhm9G4s5/Muriel-Naressi-Albano.png"
+      },           
+
 
     };
+    
+
+    
 
     function atualizarTecnicos() {
       const base = document.getElementById("base").value;
@@ -211,17 +266,19 @@
       }, 1000);
     }
 
-    function consultarImagem() {
-      const tecnico = document.getElementById('tecnico').value;
-      const senha = document.getElementById('senha').value;
+function consultarImagem() {
+  const tecnico = document.getElementById('tecnico').value;
+  const senha = document.getElementById('senha').value;
 
-      if (!tecnico) return alert("Selecione o técnico.");
-      if (!credenciais[tecnico]) return alert("Técnico não configurado.");
-      if (senha !== credenciais[tecnico].senha) return alert("Senha incorreta.");
+  if (!tecnico) return alert("Selecione o técnico.");
+  if (!credenciais[tecnico]) return alert("Técnico não configurado.");
+  if (senha !== credenciais[tecnico].senha) return alert("Senha incorreta.");
 
-      const imagem = encodeURIComponent(credenciais[tecnico].imagem);
-      window.location.href = `visualizar.html?img=${imagem}`;
-    }
+  const imagem = encodeURIComponent(credenciais[tecnico].imagem);
+  const tecnicoEncoded = encodeURIComponent(tecnico);
+  window.location.href = `visualizar.html?img=${imagem}&tecnico=${tecnicoEncoded}`;
+}
+
   </script>
 </body>
 </html>
